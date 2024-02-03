@@ -1,6 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Spawners : MonoBehaviour
+public class SpawnerScheduler : MonoBehaviour
 {
     private Spawner[] _spawners;
     private float _spawnInterval = 2f;
@@ -18,6 +19,8 @@ public class Spawners : MonoBehaviour
     private void SpawnEnemy()
     {
         int chosenSpawner = Random.Range(0, _spawners.Length);
+        _spawners[chosenSpawner].AddComponent<Enemy>();
         _spawners[chosenSpawner].SpawnEnemy();
+        
     }
 }
