@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,7 +10,7 @@ public class Enemy : MonoBehaviour
         Move();
     }
 
-    public void ChangeDirection(Vector3 newDirection)
+    public void SetDirection(Vector3 newDirection)
     {
         _direction = newDirection;
     }

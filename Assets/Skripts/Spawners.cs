@@ -1,25 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawners : MonoBehaviour
 {
-    private Spawner[] spawners;
+    private Spawner[] _spawners;
     private float _spawnInterval = 2f;
 
     private void Awake()
     {
-        spawners = FindObjectsOfType<Spawner>();
+        _spawners = FindObjectsOfType<Spawner>();
     }
 
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnEnemyFromRandomSpawner), _spawnInterval, _spawnInterval);
+        InvokeRepeating(nameof(SpawnEnemy), _spawnInterval, _spawnInterval);
     }
 
-    private void SpawnEnemyFromRandomSpawner()
+    private void SpawnEnemy()
     {
-        int randomIndex = Random.Range(0, spawners.Length);
-        spawners[randomIndex].SpawnEnemy();
+        int chosenSpawner = Random.Range(0, _spawners.Length);
+        _spawners[chosenSpawner].SpawnEnemy();
     }
 }

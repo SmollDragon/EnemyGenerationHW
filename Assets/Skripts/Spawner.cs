@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPrefab;
-    [SerializeField] Vector3 _direction;
+    [SerializeField] private Vector3 _direction;
 
     private Transform _spawnPoint;
 
@@ -17,8 +15,7 @@ public class Spawner : MonoBehaviour
     public void SpawnEnemy()
     {
         GameObject enemyObject = Instantiate(_enemyPrefab, _spawnPoint.position, _spawnPoint.rotation);
-        Enemy enemy = enemyObject.AddComponent<Enemy>();
-        
-        enemy.ChangeDirection(_direction);
+        Enemy enemy = enemyObject.AddComponent<Enemy>();        
+        enemy.SetDirection(_direction);
     }  
 }
