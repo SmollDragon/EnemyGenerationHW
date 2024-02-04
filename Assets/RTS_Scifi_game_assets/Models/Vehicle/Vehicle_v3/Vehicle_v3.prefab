@@ -425,6 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011305641392}
   - component: {fileID: 111000010965124170}
+  - component: {fileID: -5512394105154147435}
   m_Layer: 0
   m_Name: Vehicle_v3
   m_TagString: Untagged
@@ -472,6 +473,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &-5512394105154147435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012446315042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f47e279526d3e4fbe962ee6b35f3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1000012730016020
 GameObject:
   m_ObjectHideFlags: 0

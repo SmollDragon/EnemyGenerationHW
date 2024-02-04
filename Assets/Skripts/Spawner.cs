@@ -1,8 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private Transform _enemy;
+    [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private Vector3 _direction;
 
     private Transform _spawnPoint;
@@ -14,8 +15,7 @@ public class Spawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        Transform enemyCreator = Instantiate(_enemy, _spawnPoint.position, _spawnPoint.rotation);
-        Enemy enemy = enemyCreator.gameObject.AddComponent<Enemy>();
+        Enemy enemy = Instantiate(_enemyPrefab, _spawnPoint.position, _spawnPoint.rotation);
         enemy.SetDirection(_direction);
     }
 }
