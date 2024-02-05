@@ -18,9 +18,7 @@ public class SpawnerScheduler : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        int chosenSpawner = Random.Range(0, _spawners.Length);
-        _spawners[chosenSpawner].AddComponent<Enemy>();
-        _spawners[chosenSpawner].SpawnEnemy();
-        
+        int chosenSpawner = Random.Range(0, _spawners.Length);        
+        _spawners[chosenSpawner].SpawnEnemy();       
     }
 }

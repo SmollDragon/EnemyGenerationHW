@@ -1,10 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _enemyPrefab;
-    [SerializeField] private Vector3 _direction;
+    [SerializeField] private Target[] _targets;
 
     private Transform _spawnPoint;
 
@@ -15,7 +14,8 @@ public class Spawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
+        int chosenTarget = Random.Range(0, _targets.Length);
         Enemy enemy = Instantiate(_enemyPrefab, _spawnPoint.position, _spawnPoint.rotation);
-        enemy.SetDirection(_direction);
+        enemy.SetTarget(_targets[chosenTarget]);            
     }
 }
