@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private Target[] _targets;
@@ -16,6 +16,6 @@ public class Spawner : MonoBehaviour
     {
         int chosenTarget = Random.Range(0, _targets.Length);
         Enemy enemy = Instantiate(_enemyPrefab, _spawnPoint.position, _spawnPoint.rotation);
-        enemy.SetTarget(_targets[chosenTarget]);            
+        enemy.SetTarget(_targets[chosenTarget]);
     }
 }

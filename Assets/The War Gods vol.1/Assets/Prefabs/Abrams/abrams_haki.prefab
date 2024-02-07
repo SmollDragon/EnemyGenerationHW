@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4655211920307374}
   - component: {fileID: 205546747703449842}
-  - component: {fileID: -1457615599715846865}
+  - component: {fileID: 5894856308579360123}
   m_Layer: 0
   m_Name: abrams_haki
   m_TagString: Untagged
@@ -293,7 +293,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23848701033890722}
   m_Enabled: 1
---- !u!114 &-1457615599715846865
+--- !u!114 &5894856308579360123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712539989384112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f47e279526d3e4fbe962ee6b35f3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46c4b2ea7a701c9469b1c56860141288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1742322472276058

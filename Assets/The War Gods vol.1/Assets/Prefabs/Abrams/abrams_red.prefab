@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4011935900704370}
   - component: {fileID: 205553922466369808}
-  - component: {fileID: 5119349154986675943}
+  - component: {fileID: 7289177856552085279}
   m_Layer: 0
   m_Name: abrams_red
   m_TagString: Untagged
@@ -261,7 +261,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23734771068918530}
   m_Enabled: 1
---- !u!114 &5119349154986675943
+--- !u!114 &7289177856552085279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667382144086044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f47e279526d3e4fbe962ee6b35f3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46c4b2ea7a701c9469b1c56860141288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1683124901131140

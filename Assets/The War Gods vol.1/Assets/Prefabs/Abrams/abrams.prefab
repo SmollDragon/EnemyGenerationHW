@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4708322694439278}
   - component: {fileID: 205853867339847222}
-  - component: {fileID: 7100662620130872117}
+  - component: {fileID: 2290528103581488276}
   m_Layer: 0
   m_Name: abrams
   m_TagString: Untagged
@@ -261,7 +261,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23152150573061864}
   m_Enabled: 1
---- !u!114 &7100662620130872117
+--- !u!114 &2290528103581488276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488040279437534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f47e279526d3e4fbe962ee6b35f3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46c4b2ea7a701c9469b1c56860141288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1734235531377284

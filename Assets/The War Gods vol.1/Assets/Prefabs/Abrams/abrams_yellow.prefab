@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4244797542869022}
   - component: {fileID: 205307728538937038}
-  - component: {fileID: -8289931754942527534}
+  - component: {fileID: 1167299622320750043}
   m_Layer: 0
   m_Name: abrams_yellow
   m_TagString: Untagged
@@ -178,7 +178,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23088284808701890}
   m_Enabled: 1
---- !u!114 &-8289931754942527534
+--- !u!114 &1167299622320750043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1768061000800678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f47e279526d3e4fbe962ee6b35f3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46c4b2ea7a701c9469b1c56860141288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1820622016487110
