@@ -4,7 +4,7 @@ public class Target : MonoBehaviour
 {
     [SerializeField] private RoutePointCreator _routeManager;
     private Transform _currentPoint;
-    private Transform _tempPoint;
+    private Vector3 _tempPoint;
     private bool _isAvoidingObstacle = false;
     private float _speed = 6f;
     private float _checkObstacleDistance = 3f;
@@ -32,24 +32,22 @@ public class Target : MonoBehaviour
         }
         else
         {
-            MoveToPoint(_currentPoint);
+            MoveToPoint(_currentPoint.position);
         }
     }
 
-    private void MoveToPoint(Transform point)
+    private void MoveToPoint(Vector3 destination)
     {
-        transform.LookAt(point);
-        transform.position = Vector3.MoveTowards(transform.position, point.position, _speed * Time.deltaTime);
+        transform.LookAt(destination);
+        transform.position = Vector3.MoveTowards(transform.position, destination, _speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, point.position) < 0.1f)
+        if (Vector3.Distance(transform.position, destination) < 0.1f)
         {
-            if (_isAvoidingObstacle && point == _tempPoint)
+            if (_isAvoidingObstacle && destination == _tempPoint)
             {
-                Destroy(_tempPoint.gameObject);
-                _tempPoint = null;
                 _isAvoidingObstacle = false;
             }
-            else if (_isAvoidingObstacle == false && point == _currentPoint)
+            else if (_isAvoidingObstacle == false && Vector3.Distance(transform.position, _currentPoint.position) < 0.1f)
             {
                 _currentPoint = GetRoutePoint();
             }
@@ -58,12 +56,7 @@ public class Target : MonoBehaviour
 
     private void SetTempPoint()
     {
-        if (_tempPoint == null)
-        {
-            _tempPoint = new GameObject("TempPoint").transform;
-        }
-
-        _tempPoint.position = CalculateAvoidancePoint();
+        _tempPoint = CalculateAvoidancePoint();
         _isAvoidingObstacle = true;
     }
 
@@ -84,13 +77,13 @@ public class Target : MonoBehaviour
 
     private Transform GetRoutePoint()
     {
-        int randomIndex = Random.Range(0, _routeManager.RoutePoints.Length);
+        int randomIndex = Random.Range(0, _routeManager.GetRoutePoints().Length);
 
-        while (_routeManager.RoutePoints[randomIndex] == _currentPoint)
+        while (_routeManager.GetRoutePoints()[randomIndex] == _currentPoint)
         {
-            randomIndex = Random.Range(0, _routeManager.RoutePoints.Length);
+            randomIndex = Random.Range(0, _routeManager.GetRoutePoints().Length);
         }
 
-        return _routeManager.RoutePoints[randomIndex];
+        return _routeManager.GetRoutePoints()[randomIndex];
     }
 }

@@ -15,9 +15,11 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
+        WaitForSeconds wait = new WaitForSeconds(_spawnInterval);
+
         while (_isCoroutineWork)
         {
-            yield return new WaitForSeconds(_spawnInterval);
+            yield return wait;
             ChoseSpawner();
         }
     }

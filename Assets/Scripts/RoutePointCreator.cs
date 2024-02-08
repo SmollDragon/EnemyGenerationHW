@@ -4,11 +4,15 @@ public class RoutePointCreator : MonoBehaviour
 {
     private Transform[] _routePoints;
     private int _pointsCount = 30;
-    public Transform[] RoutePoints => _routePoints;
 
     private void Awake()
     {
         GenerateRandomPoint();
+    }
+
+    public Transform[] GetRoutePoints() 
+    {
+        return (Transform[])_routePoints.Clone();
     }
 
     private void GenerateRandomPoint()

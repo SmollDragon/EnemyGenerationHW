@@ -8,14 +8,18 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         Move();
+        DestroyIfTargetReached();
+    }
+
+    public void SetTarget(Target newTarget)
+    {
+        _target = newTarget;
     }
 
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _speed * Time.deltaTime);
-        transform.LookAt(_target.transform);
-
-        DestroyIfTargetReached();
+        transform.LookAt(_target.transform);        
     }
 
     private void DestroyIfTargetReached()
@@ -26,10 +30,5 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    public void SetTarget(Target newTarget)
-    {
-        _target = newTarget;
-    }
+    }  
 }
